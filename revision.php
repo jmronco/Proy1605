@@ -1,8 +1,8 @@
 <?php
-$PATH='lib';
+$PATH='lib/';
 
-include $PATH.'lib/Conexion.php';
-include $PATH.'lib/Usuario.php';
+include $PATH.'Conexion.php';
+include $PATH.'Usuario.php';
 
 $oUsr=new Usuario();
 $oUsr->nombre='nuevo';
