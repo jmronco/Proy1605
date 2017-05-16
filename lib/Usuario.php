@@ -36,7 +36,7 @@ class Usuario{
         else
             return false;
         $clavemd5=md5($this->clave);
-        $sql="SELECT * FROM acceso WHERE nomusuario='$this->nombre' and pwusuario='md5($this->clave)'";
+        $sql="SELECT * FROM acceso WHERE nomusuario='$this->nombre' and pwusuario='$clavemd5'";
         $resultado=$db->query($sql);
         
         if($resultado->num_rows>=1)

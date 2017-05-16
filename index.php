@@ -21,9 +21,13 @@ and open the template in the editor.
         <a href="revision.php">Revisi&oacute;n sesi&oacute;n</a>
         <?php
            echo md5('#holamundo&');
+           echo '<br>';
            echo md5('holamundo');
+           echo '<br>';
            echo md5('HoLaMundo');
-           echo md5('HoLaMundo');
+           echo '<br>';
+           echo md5('HOLAMundo');
+           echo '<br>';
         ?>
     </body>
 </html>
