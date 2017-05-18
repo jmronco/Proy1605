@@ -1,17 +1,21 @@
 <?php
+session_start();
+
+var_dump($_SESSION);
 $PATH='lib/';
 
 include $PATH.'Conexion.php';
 include $PATH.'Usuario.php';
 
 $oUsr=new Usuario();
-$oUsr->nombre='flopez';
-$oUsr->clave='1234';
+$oUsr->nombre=$_POST['nombre'];
+$oUsr->clave=$_POST['clave'];
 
 if($oUsr->VerificaUsuario())
-    echo "Existe";
-else 
-     echo "No existe";   
+    $_SESSION['USR']=$oUsr;
+
+
+header('Location:http://localhost:8081/proy1605/');
 
 /*sesion_start();
 var_dump($_SESSION);*/
